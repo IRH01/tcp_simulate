@@ -10,7 +10,7 @@ import java.util.Arrays;
 /**
  * Socket工具类
  *
- * @author Dream.xie
+ * @author iritchie
  */
 public final class SocketUtil{
     /**

@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * socket接收器
  *
- * @author Dream.xie
+ * @author iritchie
  */
 public abstract class SocketAcceptor{
     /**

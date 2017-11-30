@@ -5,7 +5,7 @@
 package com.irh.material.basics.netty.TCP.common;
 
 /**
- * Created by Dream.xie on 2016/9/11.
+ * Created by iritchie on 2016/9/11.
  */
 public class SocketInfo{
     /**

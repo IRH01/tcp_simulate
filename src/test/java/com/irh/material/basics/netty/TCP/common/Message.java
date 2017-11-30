@@ -11,7 +11,7 @@ import java.nio.ByteBuffer;
  * Socket消息.
  * head(2个字节)+长度(2个字节)+code(2个字节)+类型(1个字节)+body
  *
- * @author Dream.xie
+ * @author iritchie
  */
 public final class Message{
 

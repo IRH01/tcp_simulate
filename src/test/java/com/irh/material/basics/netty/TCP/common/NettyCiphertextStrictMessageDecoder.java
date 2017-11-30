@@ -5,7 +5,6 @@
  */
 package com.irh.material.basics.netty.TCP.common;
 
-import com.irh.material.basics.spring.SpringTest;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
@@ -17,10 +16,10 @@ import java.util.List;
 /**
  * Netty解码器-密文.
  *
- * @author dream.xie
+ * @author iritchie
  */
 final class NettyCiphertextStrictMessageDecoder extends ByteToMessageDecoder{
-    private static Logger log = Logger.getLogger(SpringTest.class.getClass());
+    private static Logger log = Logger.getLogger(NettyCiphertextStrictMessageDecoder.class.getClass());
 
     /**
      * 解密

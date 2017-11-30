@@ -5,7 +5,6 @@
  */
 package com.irh.material.basics.netty.TCP.common;
 
-import com.irh.material.basics.spring.SpringTest;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
@@ -14,10 +13,10 @@ import org.apache.log4j.Logger;
 /**
  * Netty编码器-密文.
  *
- * @author dream.xie
+ * @author iritchie
  */
 final class NettyCiphertextStrictMessageEncoder extends MessageToByteEncoder<Message>{
-    private static Logger log = Logger.getLogger(SpringTest.class.getClass());
+    private static Logger log = Logger.getLogger(NettyCiphertextStrictMessageEncoder.class.getClass());
 
     @Override
     protected void encode(final ChannelHandlerContext ctx, final Message message, final ByteBuf out) throws Exception{

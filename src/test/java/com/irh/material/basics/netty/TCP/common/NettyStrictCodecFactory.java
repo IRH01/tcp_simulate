@@ -5,7 +5,6 @@
  */
 package com.irh.material.basics.netty.TCP.common;
 
-import com.irh.material.basics.spring.SpringTest;
 import io.netty.handler.codec.ByteToMessageDecoder;
 import io.netty.handler.codec.MessageToByteEncoder;
 import io.netty.util.AttributeKey;
@@ -14,10 +13,10 @@ import org.apache.log4j.Logger;
 /**
  * Netty 编码,解码器工厂.
  *
- * @author Dream.xie
+ * @author iritchie
  */
 public final class NettyStrictCodecFactory{
-    private static Logger log = Logger.getLogger(SpringTest.class.getClass());
+    private static Logger log = Logger.getLogger(NettyStrictCodecFactory.class.getClass());
 
     /**
      * 解密密钥netty上下文属性
@@ -31,18 +30,18 @@ public final class NettyStrictCodecFactory{
     /**
      *
      */
-    private NettyStrictCodecFactory() {
+    private NettyStrictCodecFactory(){
 
     }
 
     /**
      * 获得编码器
      */
-    public static MessageToByteEncoder getEncoder(final Boolean isCiphertext) {
+    public static MessageToByteEncoder getEncoder(final Boolean isCiphertext){
         MessageToByteEncoder encoder;
-        if (isCiphertext) {
+        if(isCiphertext){
             encoder = new NettyCiphertextStrictMessageEncoder();
-        } else {
+        }else{
             encoder = new NettyPlaintextStrictMessageEncoder();
         }
         return encoder;
@@ -51,11 +50,11 @@ public final class NettyStrictCodecFactory{
     /**
      * 获得解码器
      */
-    public static ByteToMessageDecoder getDecoder(final Boolean isCiphertext) {
+    public static ByteToMessageDecoder getDecoder(final Boolean isCiphertext){
         ByteToMessageDecoder decoder;
-        if (isCiphertext) {
+        if(isCiphertext){
             decoder = new NettyCiphertextStrictMessageDecoder();
-        } else {
+        }else{
             decoder = new NettyPlaintextStrictMessageDecoder();
         }
         return decoder;
