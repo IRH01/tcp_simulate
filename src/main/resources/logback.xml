@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <!--定义变量-->
+    <property name="level" value="DEBUG"/>
+    <property name="app_name" value="smart_data"/>
+    <timestamp key="bySecond" datePattern="yyyy-MM-dd'T'HH:mm:ss"/>
+    <contextName>${app_name}</contextName>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %date{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level
+                %logger
+                %message%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>../log/smart_data.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>./log/smart_data.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                %date{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level
+                %logger
+                %message%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework.transaction" level="INFO"/>
+    <logger name="org.springframework" level="DEBUG"/>
+    <logger name="com.yunva" level="INFO"/>
+    <logger name="dao" level="DEBUG"/>
+    <logger name="java.sql" level="DEBUG"/>
+    <logger name="org.mybatis" level="DEBUG"/>
+    <logger name="com.yunva" level="DEBUG"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>

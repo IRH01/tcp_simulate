@@ -1,0 +1,13 @@
+//唯一标识符
+package com.irh.material.netty.chapter08_1;
+
+//生成文件的包路径
+option java_package = "com.irh.material.netty.chapter08_1";
+//生成文件的类名称
+option java_outer_classname = "SubscribeRespProto";
+
+message SubscribeResp {
+    required int32 subReqId = 1;
+    required int32 respCode = 2;
+    required string desc = 3;
+}

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tcp_simulate:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="tcp_simulate-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="tcp_simulate:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,7 @@
+protoc -I=C:\Users\Administrator\Desktop\protoc-2.5.0-win32 --java_out=C:\Users\Administrator\Desktop\protoc-2.5.0-win32 C:\Users\Administrator\Desktop\protoc-2.5.0-win32\SubscribeReq.proto
+
+protoc --java_out=./ SubscribeReq.proto
+
+protoc --java_out=..\..\..\..\..\..\   SubscribeReq.proto
+
+protoc --java_out=..\..\..\..\..\..\   SubscribeResp.proto
